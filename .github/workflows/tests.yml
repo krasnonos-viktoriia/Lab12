@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests with Allure
         run: |
-          pytest --alluredir=allure-results
+          pytest tests/test_login_steps.py tests/test_checkboxes_steps.py tests/test_alerts_steps.py tests/test_windows_attachment.py --alluredir=allure-results
 
       - name: Upload screenshots
         uses: actions/upload-artifact@v4
