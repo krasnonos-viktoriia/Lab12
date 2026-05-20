@@ -11,7 +11,7 @@ async def page(request):
     os.makedirs("traces", exist_ok=True)
 
     async with async_playwright() as pw:
-        browser = await pw.chromium.launch(headless=False)
+        browser = await pw.chromium.launch(headless=True)
         context = await browser.new_context()
 
         await context.tracing.start(
